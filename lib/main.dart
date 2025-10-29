@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:confetti/confetti.dart';
 import 'screens/welcome_screen.dart';
 
-void main() => runApp(const SignupAdventureApp());
+void main() {
+  runApp(const SignupAdventureApp());
+}
 
 class SignupAdventureApp extends StatelessWidget {
   const SignupAdventureApp({super.key});
@@ -10,13 +14,12 @@ class SignupAdventureApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Signup Adventure',
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: Colors.deepPurple,
+        primarySwatch: Colors.deepPurple,
         fontFamily: 'Roboto',
       ),
-      home: const WelcomeScreen(),
+      home: WelcomeScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
